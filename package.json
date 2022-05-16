@@ -1,0 +1,22 @@
+{
+  "name": "smatchups",
+  "private": true,
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/resolver-glob": "^2.5.0",
+    "@parcel/transformer-sass": "^2.5.0",
+    "parcel": "^2.0.0"
+  },
+  "staticFiles": {
+    "staticPath": [
+      "static/img/char"
+    ]
+  },
+  "dependencies": {
+    "parcel-plugin-static-files-copy": "^2.6.0"
+  }
+}

@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<title>Smatch Brups</title>
+
+	<!-- CSS -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+	<link rel="shortcut icon" href="./favicon.ico" />
+	<link rel="stylesheet" href="./style.scss">
+	<script src="./functions.js" type="module"></script>
+	<script src="./database.js"></script>
+</head>
+<body>
+
+
+<div id="header-container">
+
+
+	<table id="header" cellpadding="12px">
+		<tbody>
+		<tr>
+			<td class="logo">
+				<img src="../static/img/logo.svg"/>
+			</td>
+			<td class="header-content">
+				<small>Your opinion on Smash matchups.</small>
+			</td>
+
+		</tr>
+		</tbody>
+	</table>
+	<div id="tableHeadNameFixed">
+		Name
+	</div>
+	<div id="tableFixedContainer">
+
+		<table id="tableFixed" >
+			<thead>
+			<tr id="tableFixedTr"></tr>
+			</thead>
+		</table>
+	</div>
+	<div id="tableFixedContainerVert" >
+		<table  id="tableFixedVert">
+			<thead><tr><th class="thNameAux">Name</th></tr></thead>
+			<tbody class="tbodyVertTarget">
+
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div id="content">
+
+	<table id="tableVertical" >
+		<thead><tr><th class="thName">Name</th></tr></thead>
+		<tbody class="tbodyVert">
+		<tr id="trCloneVert" class="trVert">
+			<td class="nombreVert"></td>
+			<td><img class="imgVert"/>
+				<span class="mini-text">
+					<span class="mini-pos">2 </span>
+					<span class="mini-even">1 </span>
+					<span class="mini-neg">2 </span>
+				</span>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+	<div id="tableHorizontalContainer">
+
+		<table id="tableHorizontal" >
+			<thead>
+
+				<tr id="headerHorizontal">
+					<th class="headerHor-green headerHor" title="Quantity of matches where this character has an Advantage">
+						ADV
+					</th>
+					<th class="headerHor-yellow headerHor" title="Quantity of matches where this character has an Equal advantage">
+						EVEN
+					</th>
+					<th class="headerHor-red headerHor"  title="Quantity of matches where this character has a Disadvantage">
+						DIS
+					</th>
+					<th id="thClone" class="thHort">
+						<img class="imgHor"/>
+					</th>
+				</tr>
+			</thead>
+			<tbody id="tbodyHor">
+				<tr id="trCloneHor" class="trHor">
+					<td id="tdCloneHor" class="match-cell"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+</div>
+
+
+<div id="votes-card-container"  style="display: none;">
+
+	<div id="votes-card-overlay"></div>
+	<div id="votes-card" class=" my-vote">
+		<div id="votes-closer">X</div>
+		<h2 class="opinion-title">
+			<span class="hide-if-empty">Your opinion is...</span>
+		</h2>
+
+		<div class="my-vote-slider-container">
+
+			<div class="image-name">
+				<img id="vote-x"/>
+				<b id="vote-x-name" class="my-vote-name-x"></b>
+			</div>
+			<div>
+				<div class="slider-close">
+					<h2><span id="my-vote-x">50</span><small>%</small></h2>
+					<input id="my-vote-slider" type="range" min="0" max="6">
+					<h2><span id="my-vote-y">50</span><small>%</small></h2>
+				</div>
+				<div>
+					<span><span class="hide-if-empty">
+						has a
+							<br>
+							<span id="match-chances"></span>
+						</span>
+						<br>
+						against
+					</span>
+				</div>
+			</div>
+			<div  class="image-name">
+				<img  id="vote-y"/>
+				<b id="vote-y-name" class="my-vote-name-y"></b>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
