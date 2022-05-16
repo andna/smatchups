@@ -2,7 +2,7 @@ import imageUrls from '../static/img/char/*.png'
 
 var firstColors = ['pos','even','neg'];
 
-let smashDBsorted = [];
+let smashDBSorted = [];
 
 function init() {
 

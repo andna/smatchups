@@ -425,3 +425,5 @@ var smashDB = [
         "imageId": "sora"
     }
 ];
+
+module.exports = smashDB
